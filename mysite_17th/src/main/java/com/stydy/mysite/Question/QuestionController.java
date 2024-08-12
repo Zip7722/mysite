@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import lombok.RequiredArgsConstructor;
 //@RequestMapping("/question") //모든 url에 /list를 선언함으로서 list를 생략할 수 있음(선택사항)
+import org.springframework.web.bind.annotation.RequestParam;
+
 @RequiredArgsConstructor
 @Controller
 public class QuestionController {
@@ -30,13 +32,16 @@ public class QuestionController {
 		//자바 코드를 삽입할 수 있는 html코드인 템플릿이 필요 => Tymeleaf 사용
 		//해당 파일의 이름만 설정하면 알아서 실행해줌
 	}
-		
+	//상세 페이지로 이동
 	@GetMapping(value = "/question/detail/{id}") //id의 값을 가진 링크를 이동할 때 해당 id의 데이터를 가져오는것
 	public String detail(Model model, @PathVariable("id") Integer id) {//Integer id컬럼값과 연결하여 @pathvariable("변수명")으로 변경한다(사용자 url의 변수명 사용가능)
 		Question question = this.questionService.getQuestion(id);
 		model.addAttribute("question",question);
 	return "question_detail";	
 	}
+	
+	//질문 등록 페이지로 이동
+	
 	
 
 }
