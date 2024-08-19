@@ -13,3 +13,23 @@ th.td.tr{
 	padding: 5px;
 }
 	*/
+	
+	.page-item.active .page-link{
+		background-color: orange;
+		border-color: orange;
+	};
+.page-link{
+	color: gray !important;
+	text-decoration: none !important;
+}
+	a{
+		color: orange;
+		 text-decoration: none !important;
+	};
+	.page-link:hover{
+		color: white;
+		background-color: black;
+		
+	};
+	
+	

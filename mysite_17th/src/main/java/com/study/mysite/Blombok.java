@@ -1,4 +1,4 @@
-package com.stydy.mysite;
+package com.study.mysite;
 
 import lombok.Data;
 import lombok.Getter;
